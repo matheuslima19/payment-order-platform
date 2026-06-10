@@ -1,6 +1,10 @@
-package com.matheus.orderservice.entity;
+package com.matheus.orderservice.adapter.out.persistence;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,13 +12,12 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "orders")
-public class OrderEntity {
+public class OrderJpaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,11 +30,4 @@ public class OrderEntity {
     private String status;
 
     private LocalDateTime createdAt;
-
-    public OrderEntity(String customerId, BigDecimal amount, String status) {
-        this.customerId = customerId;
-        this.amount = amount;
-        this.status = status;
-        this.createdAt = LocalDateTime.now();
-    }
 }

@@ -1,4 +1,4 @@
-package com.matheus.orderservice.exception;
+package com.matheus.orderservice.domain.exception;
 
 public class OrderNotFoundException extends RuntimeException {
     public OrderNotFoundException(Long id) {

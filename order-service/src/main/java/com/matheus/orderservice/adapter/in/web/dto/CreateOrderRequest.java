@@ -1,4 +1,4 @@
-package com.matheus.orderservice.dto;
+package com.matheus.orderservice.adapter.in.web.dto;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;

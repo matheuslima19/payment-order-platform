@@ -1,4 +1,4 @@
-package com.matheus.orderservice.dto;
+package com.matheus.orderservice.adapter.in.web.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
